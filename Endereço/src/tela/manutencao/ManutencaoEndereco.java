@@ -33,7 +33,7 @@ public class ManutencaoEndereco extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jtfCódigo = new javax.swing.JTextField();
+        jtfCodigo = new javax.swing.JTextField();
         jtfBairro = new javax.swing.JTextField();
         jtfComplemento = new javax.swing.JTextField();
         jtfLogradouro = new javax.swing.JTextField();
@@ -74,6 +74,11 @@ public class ManutencaoEndereco extends javax.swing.JDialog {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
 
@@ -108,7 +113,7 @@ public class ManutencaoEndereco extends javax.swing.JDialog {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jtfBairro)
-                                    .addComponent(jtfCódigo))))
+                                    .addComponent(jtfCodigo))))
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar)))
                 .addContainerGap(37, Short.MAX_VALUE))
@@ -121,7 +126,7 @@ public class ManutencaoEndereco extends javax.swing.JDialog {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jtfCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -152,8 +157,13 @@ controlador.ControladorEndereco.inserir(this);
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+controlador.ControladorEndereco.alterar(this);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAlterarActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+    // TODO add your handling code here:
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,8 +218,8 @@ controlador.ControladorEndereco.inserir(this);
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     public javax.swing.JTextField jtfBairro;
+    public javax.swing.JTextField jtfCodigo;
     public javax.swing.JTextField jtfComplemento;
-    public javax.swing.JTextField jtfCódigo;
     public javax.swing.JTextField jtfLogradouro;
     // End of variables declaration//GEN-END:variables
 }
